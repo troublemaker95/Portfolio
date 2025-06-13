@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .project {
+      margin-bottom: 20px;
+    }
+    .dark-mode-toggle {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>My Portfolio</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <span class="dark-mode-toggle" onclick="toggleDarkMode()">🌓</span>
+    </div>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm [Your Name], a passionate developer with skills in web development and software engineering.</p>
+    <img src="profile.jpg" alt="My Photo" style="width:150px; border-radius:50%;">
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download>Download Resume (PDF)</a>
+    <h3>Education</h3>
+    <p>B.Tech in [Your Major], [Your University]</p>
+    <h3>Skills</h3>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Node.js (optional)</li>
+      <li>Git, GitHub</li>
+    </ul>
+    <h3>Experience</h3>
+    <p>Intern at XYZ Company – Developed a responsive dashboard using HTML, CSS, and JS</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h4>Project One</h4>
+      <p>Description: A weather app that fetches data from an API.</p>
+      <p>Technologies: HTML, CSS, JavaScript</p>
+      <a href="#">View on GitHub</a>
+    </div>
+    <div class="project">
+      <h4>Project Two</h4>
+      <p>Description: To-do list with local storage.</p>
+      <p>Technologies: JavaScript</p>
+      <a href="#">Live Demo</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required><br><br>
+      <input type="email" id="email" placeholder="Your Email" required><br><br>
+      <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.toggleAttribute('data-theme', 'dark');
+    }
+
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return false;
+      }
+      window.location.href = `mailto:youremail@example.com?subject=Portfolio Contact&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaun Joseph Godly | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <style>
+    
+    /* Reset and base styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #fefefe; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    header, footer { background: #222; color: rgb(255, 255, 255); padding: 20px 0; text-align: center; }
+    nav { display: flex; justify-content: center; gap: 20px; background: #444; padding: 10px; }
+    nav a { color: white; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .hero img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+    .skills span { display: inline-block; background: #007BFF; color: white; padding: 6px 12px; margin: 5px; border-radius: 5px; font-size: 14px; }
+   .skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skill-item {
+  text-align: center;
+  color: white;
+}
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 5px #e6e6e6);
+  transition: transform 0.3s;
+}
+
+.skill-item img:hover {
+  transform: scale(1.1);
+}
+
+    .projects, .certifications { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: white; }
+    .card img { width: 100%; height: auto; border-radius: 6px; }
+    form { display: flex; flex-direction: column; gap: 10px; }
+    form input, form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    form button { background: #007BFF; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; }
+  
+    .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+   header {
+  background-image: url('ajce.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+    
+  </style>
+</head>
+<body>
+
+ <header id="home">
+  <div class="container">
+    <div class="header-content">
+      <img src="shaun.jpg" alt="My Profile Photo" class="profile-photo" />
+      <div>
+        <h1> Shaun Joseph Godly</h1>
+        <h3>Aspiring Developer</h3>
+<p>Welcome to my personal portfolio website.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="hero">
+    <img src="shaun.jpg" alt="Profile Photo (placeholder)" />
+    <h2>Hello, I'm Shaun Joseph Godly</h2>
+    <p>Passionate about coding, building impactful solutions, and problem solving.</p>
+  </section>
+ <section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-icons">
+    <div class="skill-item">
+      <img src="icons/figma.png" alt="Figma" />
+      <p>Figma</p>
+    </div>
+    <div class="skill-item">
+      <img src="icons/c.png" alt="C" />
+      <p>C</p>
+    </div>
+    <div class="skill-item">
+      <img src="icons/html.png" alt="HTML" />
+      <p>HTML</p>
+    </div>
+    <div class="skill-item">
+      <img src="icons/python.png" alt="Python" />
+      <p>Python</p>
+    </div>
+    <div class="skill-item">
+      <img src="icons/vscode.png" alt="VS Code" />
+      <p>VS Code</p>
+    </div>
+    
+  </div>
+</section>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Bash Calculator</h3>
+        <p>Simple calculator using shell scripting.</p>
+        <small>Tech: Bash, Terminal</small><br>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="card">
+        <img src="download.png" alt="Certification" />
+        <h4>Career Essentials in Generative AI by Microsoft and LinkedIn</h4>
+        <p>Microsoft</p>
+        <a href="https://www.linkedin.com/learning/certificates/5dd42b8f3ef6ed1bf42e6b49594f3881c69709b87a0a383bda1e017607c62c41">View Certificate</a>
+      </div>
+      <div class="card">
+        <img src="certificate.jpeg" alt="Certification" />
+        <h4>Cyber Security Analyst </h4>
+        <p>IBM</p>
+        <a href="https://www.coursera.org/account/accomplishments/verify/LRODBG9D2SIR?utm_source=wa&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course">View Certificate</a>
+      </div>
+</div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>Pursuing B.Tech in Cyber Security</strong><br>Amal Jyothi College of Engneering<br>2024 – 2028
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:shaungodly123@gmail.com">shaungodly123@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shaun-godly-7945b7240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app ">linkedin.com/shaungodly</a></p>
+    <p>GitHub: <a href="#">github.com/shaungodly</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Adarsh Lucus. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
